@@ -1,9 +1,11 @@
 [workspace]
 members = [
-  "keygen",
   "kug-cli",
   "kug-core",
-  "kug-utils"
+  "kug-keygen",
+  "kug-version"
 ]
 
 resolver = "2"
+
+[workspace.dependencies]
