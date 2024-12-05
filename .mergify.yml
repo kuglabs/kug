@@ -69,14 +69,3 @@ pull_request_rules:
     actions:
       merge:
         method: squash
-  - name: Request review from team
-    description: Request review from a specific team when checks are green.
-    conditions:
-      - -closed
-      - "#approved-reviews-by = 0"
-      - "#changes-requested-reviews-by = 0"
-      - review-requested != @kuglabs/core-team
-    actions:
-      request_reviews:
-        teams:
-          - "@kuglabs/core-team"
