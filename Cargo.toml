@@ -9,3 +9,18 @@ members = [
 resolver = "2"
 
 [workspace.dependencies]
+anyhow = "1.0.79"
+dirs-next = "2.0.0"
+lazy_static = "1.4.0"
+serde = "1.0.195"
+serde_derive = "1.0.103"
+serde_yaml = "0.9.30"
+url = "2.5.0"
+
+[workspace.package]
+version = "0.1.0"
+authors = ["KUG Labs <developers@kug-protocol.io>"]
+repository = "https://github.com/kuglabs/kug"
+homepage = "https://kug-protocol.io"
+license = "Apache-2.0"
+edition = "2021"
