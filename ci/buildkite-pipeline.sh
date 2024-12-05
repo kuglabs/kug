@@ -17,3 +17,11 @@ if [[ -n $CI_PULL_REQUEST ]]; then
 else
   affected_files=()
 fi
+
+wait_step() {
+  echo "  - wait" >> "$output_file"
+}
+
+start_pipeline "Push pipeline for ${BUILDKITE_BRANCH:-?unknown branch?}"
+wait_step
+exit 0
