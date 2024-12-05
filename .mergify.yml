@@ -1,4 +1,30 @@
 pull_request_rules:
+  - name: v0.1 feature-keygen backport
+    conditions:
+      - label=v0.1
+      - label=feature-keygen
+    actions:
+      backport:
+        assignees:
+          - "{{ merged_by|replace('mergify[bot]', label|select('equalto',
+            'community')|first|default(author)|replace('community',
+            '@kuglabs/core-team')) }}"
+        ignore_conflicts: true
+        labels:
+          - feature-keygen
+        branches:
+          - v0.1
+  - name: Set automerge label on mergify backport PRs
+    conditions:
+      - author=mergify[bot]
+      - head~=^mergify/bp/
+      - "#status-failure=0"
+      - -merged
+      - label!=no-automerge
+    actions:
+      label:
+        add:
+          - automerge
   - name: Label Mergify Stacks PRs
     description: Pull requests that are part of a Mergify stack should be labeled as such
     conditions:
