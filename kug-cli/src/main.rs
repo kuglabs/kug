@@ -1,5 +1,5 @@
 use clap::Parser;
-use kug_utils::greet;
+use kug_core::core_functionality;
 
 #[derive(Parser)]
 struct Cli {
@@ -9,5 +9,6 @@ struct Cli {
 
 fn main() {
     let args = Cli::parse();
-    greet(&args.name);
+    println!("Hello from {}!", &args.name);
+    core_functionality();
 }

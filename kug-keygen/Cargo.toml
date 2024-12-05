@@ -1,7 +1,7 @@
 [package]
-name = "kug-core"
+name = "kug-keygen"
 description = "KUG Protocol"
-documentation = "https://docs.rs/kug-core"
+documentation = "https://docs.rs/kug-keygen"
 version = { workspace = true }
 authors = { workspace = true }
 repository = { workspace = true }
