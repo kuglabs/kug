@@ -1,0 +1,48 @@
+# Rust target directory (output files)
+target/
+
+# Build artifacts
+**/*.rs.bk
+*.rlib
+*.lock
+
+# Dependencies
+Cargo.lock
+/.cargo/
+target/
+debug/
+release/
+
+# IDE/Editor config files
+.idea/
+.vscode/
+*.iml
+
+# Temporary files
+*.tmp
+*.log
+*.bak
+*.swp
+
+# MacOS-specific
+.DS_Store
+
+# Node.js/npm (optional if using Node for scripts)
+node_modules/
+npm-debug.log
+yarn-error.log
+pnpm-debug.log
+
+# Rust language server
+rls/
+.clippy/
+rustfmt.toml
+
+# Environment variables
+.env
+
+# Key files (Ensure sensitive data is not committed)
+*.key
+*.pem
+*.json
+key.json

@@ -1,0 +1,8 @@
+[workspace]
+members = [
+  "kug-cli",
+  "kug-core",
+  "kug-utils"
+]
+
+resolver = "2"
