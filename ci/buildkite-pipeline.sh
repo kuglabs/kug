@@ -18,6 +18,11 @@ else
   affected_files=()
 fi
 
+start_pipeline() {
+  echo "# $*" > "$output_file"
+  echo "steps:" >> "$output_file"
+}
+
 wait_step() {
   echo "  - wait" >> "$output_file"
 }
