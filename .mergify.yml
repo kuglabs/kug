@@ -61,6 +61,7 @@ pull_request_rules:
       label:
         add:
           - community
+          - need:merge-assist
   - name: Automatic merge (squash)
     description: Merge when PR passes all branch protection and has label automerge
     conditions:
